@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import requests from '../requests';
+import store from '../store';
 
 export default {
   name: 'HelloWorld',
@@ -47,9 +47,9 @@ export default {
     };
   },
   mounted() {
-    requests.session.login('nathan@sensoro.com', 'aa1111').then((a) => {
-      this.nickname = a.data.nickname;
-    });
+    if (store.state.userInfo) {
+      this.nickname = store.state.userInfo.nickname;
+    }
   },
 };
 </script>

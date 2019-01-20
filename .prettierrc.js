@@ -1,4 +1,4 @@
 module.exports = {
-    indent: 2,
-    sigelQuote: true,
-}
+  indent: 2,
+  sigelQuote: true,
+};
